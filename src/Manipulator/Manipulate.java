@@ -12,11 +12,9 @@ import java.awt.image.DataBufferInt;
 
 import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
 import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
 import javax.imageio.stream.ImageOutputStream;
-import javax.swing.text.html.HTMLDocument.Iterator;
 
 public class Manipulate {
 	
