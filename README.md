@@ -11,7 +11,7 @@ Sort each pixel in each row of the image by color:
 Scatter every pixel randomly throughout the image:
 ![Scatter pic](https://github.com/lmccay4/ImageManipulation/blob/master/Images/larryShuffleREADME.jpg?raw=true)
 
-Sort the scattered image for a smoother histogram-esque representation of the pixels the exist in the image:
+Sort the scattered image for a smoother histogram-esque representation of the pixels that exist in the image:
 ![Scattered and Sorted pic](https://github.com/lmccay4/ImageManipulation/blob/master/Images/larryScatterAndSortREADME.jpg?raw=true)
 
 Merge two images of the same size into each other by interweaving each pixel between images:
