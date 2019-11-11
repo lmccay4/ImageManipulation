@@ -31,6 +31,26 @@ public class ImageManipulator {
 	    Manipulate.gradualSort(arr1, numberOfPics, newFileName);
 	}
 	
+	private static void scatter(String path, String newFileName) throws IOException {
+		BufferedImage img1 = Manipulate.loadImage(path);
+	    int[][] arr = Manipulate.getPixels(img1);
+	    Manipulate.scatterPixels(arr);
+	    BufferedImage img = Manipulate.createImage(arr);
+	    BufferedImage rotImg = Manipulate.rotateAndMirrorImage(img);
+	    Manipulate.fixBadJPEG(rotImg, newFileName);   
+	}
+	
+	private static void scatterAndSort(String path, String newFileName) throws IOException {
+		BufferedImage img1 = Manipulate.loadImage(path);
+	    int[][] arr = Manipulate.getPixels(img1);
+	    Manipulate.scatterPixels(arr);
+	    Manipulate.sortPixels(arr);
+	    BufferedImage img = Manipulate.createImage(arr);
+	    BufferedImage rotImg = Manipulate.rotateAndMirrorImage(img);
+	    Manipulate.fixBadJPEG(rotImg, newFileName);   
+	}
+
+	
 	private static void merge(String path1, String path2, String newFileName) throws IOException, SizeException {
 		BufferedImage img1 = Manipulate.loadImage(path1);
 		BufferedImage img2 = Manipulate.loadImage(path2);
@@ -74,9 +94,10 @@ public class ImageManipulator {
 	    int[][] result = Manipulate.mergePixels(arr1, arr2);
 	    Manipulate.gradualSort(result, numberOfPics, newFileName);
 	}
+	
 
 	public static void main(String [] args) throws Exception {
-		sort("/Users/larm2112/Projects/Misc Java Projects/images/larryCrop.jpg", "newLarrySortClass");
+		scatterAndSort("/Users/larm2112/Projects/Misc Java Projects/images/larryCrop.jpg", "larryScatterAndSortREADME");
 	}
 	
 	

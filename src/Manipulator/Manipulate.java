@@ -158,7 +158,7 @@ public class Manipulate {
 	}
 	
 	
-	public static int[][] shufflePixels(int[][] result) {
+	public static int[][] scatterPixels(int[][] result) {
 		Random random = new Random();
 
 	    for (int i = result.length - 1; i > 0; i--) {
